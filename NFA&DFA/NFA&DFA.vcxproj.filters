@@ -31,7 +31,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="fisier.in">
+    <None Include="file.in">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>

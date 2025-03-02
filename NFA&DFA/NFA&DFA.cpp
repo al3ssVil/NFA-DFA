@@ -5,20 +5,20 @@
 int main()
 {
 	std::string r;
-	std::ifstream f("fisier.in");
+	std::ifstream f("file.in");
 	f >> r;
 	if (IsValidExpresion(r))
 	{
 		std::cout << "Expression is valid: " << r << std::endl;
 		r = addConcatenation(r);
 
-		std::cout << "Concatenate form: " << r << std::endl;
+		std::cout << "\nConcatenate form: " << r << std::endl;
 		std::string postFixForm = infixToPostfix(r);
 
-		std::cout << "Postfixed form is: " << postFixForm << std::endl;
+		std::cout << "\nPostfixed form is: " << postFixForm << std::endl;
 		NFA nfa = buildNFA(r);
 
-		std::cout << "NFA FORM\n";
+		std::cout << "\nNFA FORM\n";
 		nfa.printNFA();
 
 		std::cout << "\nDFA FORM\n";
@@ -28,15 +28,19 @@ int main()
 		std::cout << "\nDFA FORM AS TABLE\n";
 		dfa.PrintAutomatonTable();
 
+		std::cout << '\n';
+
 		dfa.saveAutomatonToFile("file.out");
+
+		std::cout << '\n';
 
 		std::string word;
 		std::cout << "Check word: ";
 		std::cin >> word;
 		if (dfa.CheckWord(word))
-			std::cout << "The word is accepted by ADF!";
+			std::cout << "\nThe word is accepted by ADF!\n";
 		else
-			std::cout << "The word is not accepted by AFD!";
+			std::cout << "\nThe word is not accepted by AFD!\n";
 	}
 	else
 	{

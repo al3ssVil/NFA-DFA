@@ -21,7 +21,6 @@ struct NumericTransitionComparator
 {
 	bool operator()(const std::pair<std::string, char>& a, const std::pair<std::string, char>& b) const
 	{
-		// Compară stările numeric
 		int num_a = std::stoi(a.first.substr(1));  
 		int num_b = std::stoi(b.first.substr(1));  
 

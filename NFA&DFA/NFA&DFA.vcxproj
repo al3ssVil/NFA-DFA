@@ -135,7 +135,7 @@
     <ClInclude Include="ValidRegex&amp;Postfix.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fisier.in" />
+    <None Include="file.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
